@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Products</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C600"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A400%2C500%2C600"/>
+  <link rel="stylesheet" href="{% static 'style/categorieswise-sorted-list.css' %}"/>
+</head>
+<body>
+<div class="categorieswise-sorted-list-hzW">
+  <div class="auto-group-oztg-qqp">
+    <div class="dashboard-mjU">
+      <a href="{% url 'dashboard' %}"><p class="dashboard-HSv">Dashboard</p></a>
+      
+
+      
+      
+    </div>
+    <div class="auto-group-2jd4-ZHx">
+      <img class="vector-54-stroke-51Q" src="{% static 'assets/vector-54-stroke-9bC.png' %}"/>
+      <p class="scrapper-c1L">Scrapper</p>
+    </div>
+    <p class="my-profile-wpJ">My Profile</p>
+    <a href="{% url 'logout' %}"> <p class="logout-4P8">Logout</p> </a>
+    
+  </div>
+  <div class="auto-group-kfxc-Mt2">
+    <div class="auto-group-g7y8-6Kp">
+      <div class="auto-group-uywi-ES2">
+        <p class="category-name-Tpa">{{name.name}}</p>
+        
+        <a href="{% url 'add_link' id=name.id %}" class="add-product-Py8">Add Product</a>
+        
+      </div>
+      <div class="craped-header-WwG">
+        <p class="product-name-F8A">Product Name</p>
+        <p class="category-Zee">Category</p>
+        <p class="price-twp">Price</p>
+        <p class="rating-review-STY">Rating /Review</p>
+      </div>
+      {% for link in data %}
+      <div class="group-14-aZk">
+        <div class="auto-group-ywbu-Gaz">
+          <div class="group-13-Dm8">
+            <div class="auto-group-h1x2-kFG">
+              <a href="{% url 'data_link' link_id=link.product.id %}">
+                <p class="poly-purple-contact-form-guc">{{link.now.title|slice:":24"}}</p>
+              </a>
+              
+              <div class="auto-group-9mkz-1gz">
+                <div class="ellipse-2-xcE">
+                </div>
+                <p class="sku-Gcv">{{link.now.ASIN}}</p>
+              </div>
+            </div>
+            <div class="auto-group-ekhl-cAz">
+              <div class="auto-group-utp2-9gi">
+                <p class="shoes-VVg">{{name.name|slice:":7"}}</p>
+                <p class="last-updated-25-06-2021-drn">{{link.now.created}}</p>
+              </div>
+              <div class="auto-group-7d2w-N3g">
+                <p class="item-688-7GA">{{link.now.price}}</p>
+                <p class="mrp-999-RXk">MRP :   {{link.now.mrp}}</p>
+              </div>
+              <p class="reviews-ka2">{{link.now.review}}</p>
+            </div>
+          </div>
+          <div class="rating-stars-V1p">
+            <img class="star-circle-PN6" src="{% static 'assets/star-circle-9KC.png' %}"/>
+            <img class="star-circle-Jjx" src="{% static 'assets/star-circle-NYE.png' %}"/>
+            <img class="vector-ENi" src="{% static 'assets/vector-TXt.png' %}"/>
+            <img class="star-circle-wnv" src="{% static 'assets/star-circle-yUS.png' %}"/>
+            <img class="vector-Unr" src="{% static 'assets/vector-fvW.png' %}"/>
+          </div>
+        </div>
+        <div class="auto-group-vymc-DVY" onchange="redirectToURL('{% url 'alter_link' link_id=link.product.id %}')">
+          {% if link.product.collection %}
+          <input type="checkbox" class="rectangle-56-jyg" checked>
+          {% else %}
+          <input type="checkbox" class="rectangle-56-jyg">
+          {% endif %}
+          <a href="{% url 'remove_link' cat_id=name.id id=link.product.id %}">
+            <img class="delete-4FG" src="{% static 'assets/delete-fot.png' %}"/>
+          </a>
+          
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    
+    
+  </div>
+</div>
+
+<script>
+  function redirectToURL(url) {
+    window.location.href = url;
+  }
+</script>
+
+</body>

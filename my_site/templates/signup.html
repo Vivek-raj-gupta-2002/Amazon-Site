@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A400%2C500%2C700"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C700"/>
+  <link rel="stylesheet" href="{% static 'style/a-login.css' %}"/>
+</head>
+<body>
+<div class="a-login-3Kt">
+  <div class="rectangle-1-PPk">
+  </div>
+  <div class="auto-group-ieyc-XVx">
+    <div class="group-37-3UJ">
+      <form action='{{ action }}' method="post">
+        {% csrf_token %}
+        <div class="auto-group-q61k-z8e">
+          <p class="login-j6E">Sign-Up</p>
+          <p class="email-address-3Mp">Username</p>
+        </div>
+        {{ form.username }}
+        <div class="auto-group-cmbk-Yxn">
+          <p class="password-UrS">Password</p>
+        </div>
+          {{ form.password1 }}
+
+        <div class="auto-group-cmbk-Yxn">
+          <p class="password-UrS">Confirm Password</p>
+        </div>
+          {{ form.password2 }}
+        <input type="submit" class="group-35-HhQ" value="Register">
+        
+
+      </form>
+      
+      <div class="auto-group-dp4e-Nir">
+        <div class="line-11-KPC">
+        </div>
+        <p class="or-qsL">or</p>
+        <div class="line-12-zES">
+        </div>
+      </div>
+
+      <a href="/login" class="group-36-L3Q">Login</a>
+    </div>
+  </div>
+</div>
+</body>

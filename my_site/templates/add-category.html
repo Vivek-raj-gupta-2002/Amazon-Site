@@ -1,0 +1,73 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Add Category</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A400%2C500%2C600%2C700"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C600%2C700"/>
+  <link rel="stylesheet" href="{% static 'style/my-form-detail-page-irr.css' %}"/>
+</head>
+<body>
+<div class="my-form-detail-page-dBL">
+  <div class="sidenavbar-wSv">
+    <div class="auto-group-aper-d4r">
+      <img class="vector-54-stroke-wLS" src="{% static '/assets/vector-54-stroke-EVL.png' %}"/>
+      <p class="scrapper-4vr">Scrapper</p>
+    </div>
+    <a href="{% url 'dashboard' %}">
+      <p class="dashboard-zJi">Dashboard</p>
+    </a>
+    
+    <p class="my-profile-pHk">My Profile</p>
+    <a href="{% url 'logout' %}">
+      <p class="logout-8JS">Logout</p>
+    </a>
+  </div>
+  <div class="auto-group-haby-2uc">
+    <div class="auto-group-j1u8-mMQ">
+      <div class="auto-group-tuxl-uCi">
+        <p class="create-categories-342">Create Categories</p>
+        
+      </div>
+      <p class="create-category-d2E">Create Category</p>
+      <div class="line-5-ipN">
+      </div>
+      
+      <div class="auto-group-mykq-ydp">
+        <div class="rectangle-36-WNr">
+        </div>
+        <div class="rectangle-37-diN">
+        </div>
+      </div>
+      <div class="auto-group-yraz-ATQ">
+        <p class="create-category-3n6">Create Category</p>
+        <div class="line-13-P5G">
+        </div>
+        <p class="enter-category-name-hLr">Enter Category Name</p>
+
+        <form action="{{action}}" method="post">
+          {% csrf_token %}
+        <div class="auto-group-6xp8-DKC">
+          {{form.name}}
+          <input type="submit" value="Save Now" class="group-71-ifG">
+          
+        </div>
+      </form>
+      </div>
+    </div>
+    
+    
+  </div>
+</div>
+
+<script>
+  function redirectToURL(url) {
+    window.location.href = url;
+  }
+</script>
+</body>

@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Collected Data</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C600"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A400%2C500%2C600"/>
+  <link rel="stylesheet" href="{% static 'style/categorieswise-sorted-list.css' %}"/>
+</head>
+<body>
+<div class="categorieswise-sorted-list-hzW">
+  <div class="auto-group-oztg-qqp">
+    <div class="dashboard-mjU">
+      <a href="{% url 'dashboard' %}">
+        <p class="dashboard-HSv">Dashboard</p>
+      </a>
+      
+      
+    </div>
+    <div class="auto-group-2jd4-ZHx">
+      <img class="vector-54-stroke-51Q" src="{% static 'assets/vector-54-stroke-9bC.png' %}"/>
+      <p class="scrapper-c1L">Scrapper</p>
+    </div>
+    <p class="my-profile-wpJ">My Profile</p>
+    <a href="{% url 'logout' %}">
+      <p class="logout-4P8">Logout</p>
+    </a>
+    
+  </div>
+  <div class="auto-group-kfxc-Mt2">
+    <div class="auto-group-g7y8-6Kp">
+      <div class="auto-group-uywi-ES2">
+        <a href="{% url 'link_view' id=cat_id %}">
+          <p class="category-name-Tpa">{{cat_name}}</p>
+        </a>
+        
+        
+        <a href="{% url 'download' id=link_id %}" class="group-73-FkS">Download Data</a>
+      </div>
+      <div class="craped-header-WwG">
+        <p class="product-name-F8A">Product Name</p>
+        <p class="category-Zee">Seller</p>
+        <p class="price-twp">Price</p>
+        <p class="rating-review-STY">Rating /Review</p>
+      </div>
+
+      {% for col_data in data %}
+      <div class="group-14-aZk">
+        <div class="auto-group-ywbu-Gaz">
+          <div class="group-13-Dm8">
+            <div class="auto-group-h1x2-kFG">
+              <p class="poly-purple-contact-form-guc">{{col_data.title|slice:":15"}}</p>
+              <div class="auto-group-9mkz-1gz">
+                <div class="ellipse-2-xcE">
+                </div>
+                <p class="sku-Gcv">{{col_data.ASIN}}</p>
+              </div>
+            </div>
+            <div class="auto-group-ekhl-cAz">
+              <div class="auto-group-utp2-9gi">
+                
+                <p class="last-updated-25-06-2021-drn">{{col_data.seller}}</p>
+              </div>
+              <div class="auto-group-7d2w-N3g">
+                <p class="item-688-7GA">{{col_data.price}}</p>
+                <p class="mrp-999-RXk">MRP :   {{col_data.mrp}}</p>
+              </div>
+              <p class="reviews-ka2">{{col_data.review}}</p>
+            </div>
+          </div>
+          <div class="rating-stars-V1p">
+            <img class="star-circle-PN6" src="{% static 'assets/star-circle-9KC.png' %}"/>
+            <img class="star-circle-Jjx" src="{% static 'assets/star-circle-NYE.png' %}"/>
+            <img class="vector-ENi" src="{% static 'assets/vector-TXt.png' %}"/>
+            <img class="star-circle-wnv" src="{% static 'assets/star-circle-yUS.png' %}"/>
+            <img class="vector-Unr" src="{% static 'assets/vector-fvW.png' %}"/>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+    {% endfor %}
+    
+    
+  </div>
+</div>
+</body>

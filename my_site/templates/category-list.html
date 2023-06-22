@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Category List</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A400%2C500%2C600"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C600"/>
+  <link rel="stylesheet" href="{% static 'style/category-list.css' %}"/>
+</head>
+<body>
+<div class="category-list-zfG">
+  <div class="auto-group-4u1c-wKc">
+    <div class="auto-group-mzer-FLJ">
+      <img class="vector-54-stroke-Nfp" src="{% static '/assets/vector-54-stroke-mHG.png' %}"/>
+      <p class="scrapper-JpN">Scrapper</p>
+    </div>
+    <div class="dashboard-dLr">
+      <a href="{% url 'dashboard' %}">
+        <p class="dashboard-NZL">Dashboard</p>
+      </a>
+      <p class="my-profile-seW">My Profile</p>
+
+    <a href="{% url 'logout' %}">
+      <p class="logout-BQJ">Logout</p>
+    </a>
+
+    </div>
+    
+    
+  </div>
+  <div class="auto-group-n9mx-u5Q">
+    <div class="auto-group-hzgn-2fp">
+      <div class="auto-group-vgwz-xZU">
+        <p class="categories-gEa">Categories</p>
+        
+        <div class="add-category-c8E" onclick="redirectToURL('{% url 'add_cat_form' %}')">Create Category</div>
+      </div>
+      
+      <div class="craped-header-Tee">
+        <p class="category-name-nS2">Category  Name</p>
+        <p class="number-of-products-Wsp">Number of products</p>
+      </div>
+
+      {% for cat in data %}
+      <div class="group-14-rAz">
+        <div class="group-13-mHx">
+          <div class="auto-group-vu2n-iDC">
+            <p class="shoes-e6r">{{cat.name|slice:":10"}}</p>
+            <p class="products-mSN">{{cat.number}} Products</p>
+          </div>
+          <div class="auto-group-l3en-6jY">
+            
+            
+          </div>
+        </div>
+        <a href="{% url 'link_view' id=cat.id %}">
+          <p class="see-more-DSn">See More</p>
+        </a>
+        
+        <a href="{% url 'remove_catogery' id=cat.id %}">
+          <img class="delete-4yC" src="{% static '/assets/delete-Wmt.png' %}"/>
+        </a>
+        
+      </div>
+      
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+  function redirectToURL(url) {
+    window.location.href = url;
+  }
+</script>
+</body>

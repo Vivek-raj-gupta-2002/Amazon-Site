@@ -1,0 +1,41 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    working_dir: /code/my_site
+    volumes:
+      - .:/code
+    ports:
+      - 8000:8000
+    depends_on:
+      - redis
+      - celery
+
+  celery:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /code/my_site
+    command: celery -A my_site worker --loglevel=info
+    volumes:
+      - .:/code
+    depends_on:
+      - redis
+
+  celery-beat:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /code/my_site
+    command: celery -A my_site beat --loglevel=info
+    volumes:
+      - .:/code
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:latest
+
