@@ -40,4 +40,4 @@ http://localhost:8000/
 5. Enable/disable data collection for each link using the provided radio button.
 
 🙌 **Contributors**
-- Sanskar Goyal (@Sanskargoyal608)
+- [Sanskar Goyal](https://github.com/Sanskargoyal608)
