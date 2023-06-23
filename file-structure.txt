@@ -1,0 +1,789 @@
+📦Amazon-Site
+ ┣ 📂.git
+ ┃ ┣ 📂hooks
+ ┃ ┃ ┣ 📜applypatch-msg.sample
+ ┃ ┃ ┣ 📜commit-msg.sample
+ ┃ ┃ ┣ 📜fsmonitor-watchman.sample
+ ┃ ┃ ┣ 📜post-update.sample
+ ┃ ┃ ┣ 📜pre-applypatch.sample
+ ┃ ┃ ┣ 📜pre-commit.sample
+ ┃ ┃ ┣ 📜pre-merge-commit.sample
+ ┃ ┃ ┣ 📜pre-push.sample
+ ┃ ┃ ┣ 📜pre-rebase.sample
+ ┃ ┃ ┣ 📜pre-receive.sample
+ ┃ ┃ ┣ 📜prepare-commit-msg.sample
+ ┃ ┃ ┣ 📜push-to-checkout.sample
+ ┃ ┃ ┗ 📜update.sample
+ ┃ ┣ 📂info
+ ┃ ┃ ┗ 📜exclude
+ ┃ ┣ 📂logs
+ ┃ ┃ ┣ 📂refs
+ ┃ ┃ ┃ ┣ 📂heads
+ ┃ ┃ ┃ ┃ ┗ 📜main
+ ┃ ┃ ┃ ┗ 📂remotes
+ ┃ ┃ ┃ ┃ ┗ 📂origin
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜HEAD
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜main
+ ┃ ┃ ┗ 📜HEAD
+ ┃ ┣ 📂objects
+ ┃ ┃ ┣ 📂01
+ ┃ ┃ ┃ ┗ 📜643651fe0a124c16d730c01b7d2a1a2d2d88ff
+ ┃ ┃ ┣ 📂05
+ ┃ ┃ ┃ ┗ 📜445b9cf71cc4db923d6d7381ddce97d5601616
+ ┃ ┃ ┣ 📂0a
+ ┃ ┃ ┃ ┗ 📜3d5703447ae5b8d102e6d674c5d963d7fb6739
+ ┃ ┃ ┣ 📂0b
+ ┃ ┃ ┃ ┗ 📜9615af7d6125af56ffcad6521263992aa111e6
+ ┃ ┃ ┣ 📂0d
+ ┃ ┃ ┃ ┗ 📜aec5a6e142498163e640ea79065567dd98a18a
+ ┃ ┃ ┣ 📂1d
+ ┃ ┃ ┃ ┗ 📜602c58c14ffccdaf290b0c1dd997bcd3dfc8da
+ ┃ ┃ ┣ 📂22
+ ┃ ┃ ┃ ┗ 📜4ee9697e528e663b4bd683a4e0b533c2b3da39
+ ┃ ┃ ┣ 📂25
+ ┃ ┃ ┃ ┗ 📜e364b81e1f8282f046f0d358107fef094c6cae
+ ┃ ┃ ┣ 📂2e
+ ┃ ┃ ┃ ┗ 📜eba24f6109a13169993b91589885ce8f90eac6
+ ┃ ┃ ┣ 📂39
+ ┃ ┃ ┃ ┗ 📜1127a414f8569d180979f483c46f678c7ceada
+ ┃ ┃ ┣ 📂3d
+ ┃ ┃ ┃ ┣ 📜226fb7b6fe05c62a923bd591529dce9d9640e9
+ ┃ ┃ ┃ ┗ 📜d4084f39929d7bcd3d371c386c53b059b75cae
+ ┃ ┃ ┣ 📂42
+ ┃ ┃ ┃ ┗ 📜8f14fb70f11757a8f34a0d2687a7c482102f3f
+ ┃ ┃ ┣ 📂44
+ ┃ ┃ ┃ ┗ 📜2ecd309d937ebddae05618adeb35ed0e1f6dcb
+ ┃ ┃ ┣ 📂4a
+ ┃ ┃ ┃ ┗ 📜2226c217f360eec6c3821709449ea6e88d6c3d
+ ┃ ┃ ┣ 📂5f
+ ┃ ┃ ┃ ┗ 📜e2e1ec26590460b290927099d8f7f775698646
+ ┃ ┃ ┣ 📂61
+ ┃ ┃ ┃ ┗ 📜5cba2916364386114a125e2a1d5fe1e309df85
+ ┃ ┃ ┣ 📂69
+ ┃ ┃ ┃ ┗ 📜70be9e44e4b5af722a4f965223dd9d08751819
+ ┃ ┃ ┣ 📂6a
+ ┃ ┃ ┃ ┗ 📜a84037e0ddd666d690fa19848b2eb6a2fba90e
+ ┃ ┃ ┣ 📂6c
+ ┃ ┃ ┃ ┗ 📜afe4331ea52f6562159cef6ab036c03732507f
+ ┃ ┃ ┣ 📂6e
+ ┃ ┃ ┃ ┗ 📜528fc9386652ac6a0facbe38cab9ce11429962
+ ┃ ┃ ┣ 📂6f
+ ┃ ┃ ┃ ┗ 📜ed29c54bfc2c5e2db580a22e13363d76d545e4
+ ┃ ┃ ┣ 📂73
+ ┃ ┃ ┃ ┗ 📜3d13298e82005914c00742845935546c129592
+ ┃ ┃ ┣ 📂7b
+ ┃ ┃ ┃ ┣ 📜2e77fda82feeeb14591ea68f8ebfa602bcde5f
+ ┃ ┃ ┃ ┗ 📜2f156a200d26049a04bf6b3611fb3833f35b75
+ ┃ ┃ ┣ 📂7c
+ ┃ ┃ ┃ ┗ 📜aedb80f0ef572d05bbcd455e6cd86c8efd81f9
+ ┃ ┃ ┣ 📂8c
+ ┃ ┃ ┃ ┗ 📜152ec6160bd15ecff00d1b3cda7a1461cec1df
+ ┃ ┃ ┣ 📂8d
+ ┃ ┃ ┃ ┗ 📜7348635e5bcb0ba5fe7600277c74c9ea588bac
+ ┃ ┃ ┣ 📂8f
+ ┃ ┃ ┃ ┗ 📜d014efe3491495a7c00307169cefcd9836a944
+ ┃ ┃ ┣ 📂95
+ ┃ ┃ ┃ ┗ 📜61172e04eeb797378c9efe34eccc585b6de55c
+ ┃ ┃ ┣ 📂a1
+ ┃ ┃ ┃ ┗ 📜ef3e7b6fd3b109fa8b058d26226698fa572848
+ ┃ ┃ ┣ 📂a3
+ ┃ ┃ ┃ ┗ 📜a40e2959b237de8e2babdccbab7c68cd152bbe
+ ┃ ┃ ┣ 📂a5
+ ┃ ┃ ┃ ┗ 📜a61f2b7fbc971ffeb4254946fe6defe4d021b5
+ ┃ ┃ ┣ 📂aa
+ ┃ ┃ ┃ ┗ 📜a4b4d5d3be031878aef3886efdb53af7e3b73b
+ ┃ ┃ ┣ 📂b2
+ ┃ ┃ ┃ ┗ 📜1dd82dcca6948aeaff4e1fec51d3f16434d370
+ ┃ ┃ ┣ 📂b6
+ ┃ ┃ ┃ ┗ 📜296207d7bd42f45b6f92d737f6b66cd3f94bd6
+ ┃ ┃ ┣ 📂bd
+ ┃ ┃ ┃ ┗ 📜aab25d58d7ca2d84eec304db26abf8fea059a8
+ ┃ ┃ ┣ 📂c3
+ ┃ ┃ ┃ ┗ 📜607a09e3b040c54270e6ba72aebf9b565aa2e3
+ ┃ ┃ ┣ 📂c4
+ ┃ ┃ ┃ ┗ 📜5422dad7998f0733c36f737793e28709fd5c79
+ ┃ ┃ ┣ 📂cd
+ ┃ ┃ ┃ ┗ 📜387003845ebc0b6ca8ccd9ad4a0701c71ecfb6
+ ┃ ┃ ┣ 📂d1
+ ┃ ┃ ┃ ┗ 📜6da7f42d827ce031d0da5f350fef7a7fa3c6a9
+ ┃ ┃ ┣ 📂d5
+ ┃ ┃ ┃ ┗ 📜41c2c0482403a711fd8671d0f9f622e4502038
+ ┃ ┃ ┣ 📂d8
+ ┃ ┃ ┃ ┗ 📜b0e185960eaa6e4f0ccd21a3d96a15a77020bc
+ ┃ ┃ ┣ 📂df
+ ┃ ┃ ┃ ┗ 📜18298d1b5154a80d4828d89363d15ed0cf9086
+ ┃ ┃ ┣ 📂e0
+ ┃ ┃ ┃ ┗ 📜98436b8aafd257a31c5815be6d19454a49c9fb
+ ┃ ┃ ┣ 📂e1
+ ┃ ┃ ┃ ┗ 📜e8409bb5fc9c5cfc02c8c3aaea591ec6a297ac
+ ┃ ┃ ┣ 📂e4
+ ┃ ┃ ┃ ┗ 📜c4d0bd1d3ca13796338318188ea10bd8443ad1
+ ┃ ┃ ┣ 📂e5
+ ┃ ┃ ┃ ┗ 📜9cb6fd2eb08c391988048429dbca53840e9c9a
+ ┃ ┃ ┣ 📂f2
+ ┃ ┃ ┃ ┗ 📜46ca3f1a40e99ea2cd7a5070193324503cb0e6
+ ┃ ┃ ┣ 📂f3
+ ┃ ┃ ┃ ┗ 📜4404fdd3fceda4734c85480db9012fc8ef112f
+ ┃ ┃ ┣ 📂f7
+ ┃ ┃ ┃ ┗ 📜183e206cf933be46b1c2bac825f7ccbb0318a2
+ ┃ ┃ ┣ 📂ff
+ ┃ ┃ ┃ ┗ 📜a865d00fe40b176625a52532b1625d4b13546c
+ ┃ ┃ ┣ 📂info
+ ┃ ┃ ┗ 📂pack
+ ┃ ┃ ┃ ┣ 📜pack-2fc96b5404c67979ccea2861c16bd26ce837b300.idx
+ ┃ ┃ ┃ ┗ 📜pack-2fc96b5404c67979ccea2861c16bd26ce837b300.pack
+ ┃ ┣ 📂refs
+ ┃ ┃ ┣ 📂heads
+ ┃ ┃ ┃ ┗ 📜main
+ ┃ ┃ ┣ 📂remotes
+ ┃ ┃ ┃ ┗ 📂origin
+ ┃ ┃ ┃ ┃ ┣ 📜HEAD
+ ┃ ┃ ┃ ┃ ┗ 📜main
+ ┃ ┃ ┗ 📂tags
+ ┃ ┣ 📜COMMIT_EDITMSG
+ ┃ ┣ 📜config
+ ┃ ┣ 📜description
+ ┃ ┣ 📜FETCH_HEAD
+ ┃ ┣ 📜HEAD
+ ┃ ┣ 📜index
+ ┃ ┣ 📜ORIG_HEAD
+ ┃ ┗ 📜packed-refs
+ ┣ 📂.github
+ ┃ ┗ 📂workflows
+ ┃ ┃ ┣ 📜main.yml
+ ┃ ┃ ┗ 📜mymain.yml
+ ┣ 📂my_site
+ ┃ ┣ 📂my_site
+ ┃ ┃ ┣ 📂__pycache__
+ ┃ ┃ ┃ ┣ 📜celery.cpython-310.pyc
+ ┃ ┃ ┃ ┣ 📜settings.cpython-310.pyc
+ ┃ ┃ ┃ ┣ 📜urls.cpython-310.pyc
+ ┃ ┃ ┃ ┣ 📜wsgi.cpython-310.pyc
+ ┃ ┃ ┃ ┗ 📜__init__.cpython-310.pyc
+ ┃ ┃ ┣ 📜asgi.py
+ ┃ ┃ ┣ 📜celery.py
+ ┃ ┃ ┣ 📜settings.py
+ ┃ ┃ ┣ 📜urls.py
+ ┃ ┃ ┣ 📜wsgi.py
+ ┃ ┃ ┗ 📜__init__.py
+ ┃ ┣ 📂my_statics
+ ┃ ┃ ┣ 📂assets
+ ┃ ┃ ┃ ┣ 📜-2oQ.png
+ ┃ ┃ ┃ ┣ 📜-Bxi.png
+ ┃ ┃ ┃ ┣ 📜-dk2.png
+ ┃ ┃ ┃ ┣ 📜-opJ.png
+ ┃ ┃ ┃ ┣ 📜.png
+ ┃ ┃ ┃ ┣ 📜auto-group-19ui.png
+ ┃ ┃ ┃ ┣ 📜auto-group-1jty.png
+ ┃ ┃ ┃ ┣ 📜auto-group-68xx.png
+ ┃ ┃ ┃ ┣ 📜auto-group-gm74.png
+ ┃ ┃ ┃ ┣ 📜auto-group-httk.png
+ ┃ ┃ ┃ ┣ 📜auto-group-km8a.png
+ ┃ ┃ ┃ ┣ 📜auto-group-mfa6.png
+ ┃ ┃ ┃ ┣ 📜auto-group-mzra.png
+ ┃ ┃ ┃ ┣ 📜auto-group-pw98.png
+ ┃ ┃ ┃ ┣ 📜auto-group-qybg.png
+ ┃ ┃ ┃ ┣ 📜auto-group-rdyp.png
+ ┃ ┃ ┃ ┣ 📜auto-group-ywzz.png
+ ┃ ┃ ┃ ┣ 📜auto-group-z72e.png
+ ┃ ┃ ┃ ┣ 📜autofixnormalblack24dp-1-2y4.png
+ ┃ ┃ ┃ ┣ 📜autofixnormalblack24dp-1.png
+ ┃ ┃ ┃ ┣ 📜clouddoneblack24dp-1.png
+ ┃ ┃ ┃ ┣ 📜contentcopyblack24dp-1-YuU.png
+ ┃ ┃ ┃ ┣ 📜contentcopyblack24dp-1.png
+ ┃ ┃ ┃ ┣ 📜contentcopyblack24dp-2-YiS.png
+ ┃ ┃ ┃ ┣ 📜contentcopyblack24dp-2.png
+ ┃ ┃ ┃ ┣ 📜delete-fot.png
+ ┃ ┃ ┃ ┣ 📜delete-vaS.png
+ ┃ ┃ ┃ ┣ 📜delete-Wmt.png
+ ┃ ┃ ┃ ┣ 📜delete.png
+ ┃ ┃ ┃ ┣ 📜ellipse-23.png
+ ┃ ┃ ┃ ┣ 📜file-jpg-box-7AW.png
+ ┃ ┃ ┃ ┣ 📜file-jpg-box-AQW.png
+ ┃ ┃ ┃ ┣ 📜file-jpg-box-JxN.png
+ ┃ ┃ ┃ ┣ 📜file-jpg-box-rMk.png
+ ┃ ┃ ┃ ┣ 📜file-jpg-box-s5g.png
+ ┃ ┃ ┃ ┣ 📜file-jpg-box-T6N.png
+ ┃ ┃ ┃ ┣ 📜file-jpg-box-ZpA.png
+ ┃ ┃ ┃ ┣ 📜file-jpg-box.png
+ ┃ ┃ ┃ ┣ 📜formoneicon-1.png
+ ┃ ┃ ┃ ┣ 📜gifticon-1.png
+ ┃ ┃ ┃ ┣ 📜group-12.png
+ ┃ ┃ ┃ ┣ 📜group-21-HpJ.png
+ ┃ ┃ ┃ ┣ 📜group-21.png
+ ┃ ┃ ┃ ┣ 📜group-40-f7t.png
+ ┃ ┃ ┃ ┣ 📜group-40-NJa.png
+ ┃ ┃ ┃ ┣ 📜group-40-rLW.png
+ ┃ ┃ ┃ ┣ 📜group-40.png
+ ┃ ┃ ┃ ┣ 📜group-41-xtv.png
+ ┃ ┃ ┃ ┣ 📜group-41.png
+ ┃ ┃ ┃ ┣ 📜group-42-9Z8.png
+ ┃ ┃ ┃ ┣ 📜group-42.png
+ ┃ ┃ ┃ ┣ 📜group-46.png
+ ┃ ┃ ┃ ┣ 📜group-47-hKc.png
+ ┃ ┃ ┃ ┣ 📜group-47-hWe.png
+ ┃ ┃ ┃ ┣ 📜group-47-JsQ.png
+ ┃ ┃ ┃ ┣ 📜group-47-WQv.png
+ ┃ ┃ ┃ ┣ 📜group-47.png
+ ┃ ┃ ┃ ┣ 📜group-53.png
+ ┃ ┃ ┃ ┣ 📜group-60-3gS.png
+ ┃ ┃ ┃ ┣ 📜group-60-SMt.png
+ ┃ ┃ ┃ ┣ 📜group-60-TFU.png
+ ┃ ┃ ┃ ┣ 📜group-60.png
+ ┃ ┃ ┃ ┣ 📜group-78.png
+ ┃ ┃ ┃ ┣ 📜group-79.png
+ ┃ ┃ ┃ ┣ 📜kashifarifuserprofilepersonaccounticon-1.png
+ ┃ ┃ ┃ ┣ 📜listchecklistmenunotedocumenticon-1.png
+ ┃ ┃ ┃ ┣ 📜polygon-1-Ypn.png
+ ┃ ┃ ┃ ┣ 📜polygon-1.png
+ ┃ ┃ ┃ ┣ 📜rectangle-32.png
+ ┃ ┃ ┃ ┣ 📜rectangle-33.png
+ ┃ ┃ ┃ ┣ 📜rectangle-34.png
+ ┃ ┃ ┃ ┣ 📜rectangle-35-fCi.png
+ ┃ ┃ ┃ ┣ 📜rectangle-35.png
+ ┃ ┃ ┃ ┣ 📜star-circle-2L6.png
+ ┃ ┃ ┃ ┣ 📜star-circle-2w8.png
+ ┃ ┃ ┃ ┣ 📜star-circle-3Y2.png
+ ┃ ┃ ┃ ┣ 📜star-circle-3zv.png
+ ┃ ┃ ┃ ┣ 📜star-circle-5Fk.png
+ ┃ ┃ ┃ ┣ 📜star-circle-7gS.png
+ ┃ ┃ ┃ ┣ 📜star-circle-7RQ.png
+ ┃ ┃ ┃ ┣ 📜star-circle-9KC.png
+ ┃ ┃ ┃ ┣ 📜star-circle-b4i.png
+ ┃ ┃ ┃ ┣ 📜star-circle-BGS.png
+ ┃ ┃ ┃ ┣ 📜star-circle-C5t.png
+ ┃ ┃ ┃ ┣ 📜star-circle-EgE.png
+ ┃ ┃ ┃ ┣ 📜star-circle-fuG.png
+ ┃ ┃ ┃ ┣ 📜star-circle-G7p.png
+ ┃ ┃ ┃ ┣ 📜star-circle-ibg.png
+ ┃ ┃ ┃ ┣ 📜star-circle-Jra.png
+ ┃ ┃ ┃ ┣ 📜star-circle-jyY.png
+ ┃ ┃ ┃ ┣ 📜star-circle-KwL.png
+ ┃ ┃ ┃ ┣ 📜star-circle-nFx.png
+ ┃ ┃ ┃ ┣ 📜star-circle-NYE.png
+ ┃ ┃ ┃ ┣ 📜star-circle-pTg.png
+ ┃ ┃ ┃ ┣ 📜star-circle-q2E.png
+ ┃ ┃ ┃ ┣ 📜star-circle-S2a.png
+ ┃ ┃ ┃ ┣ 📜star-circle-szN.png
+ ┃ ┃ ┃ ┣ 📜star-circle-TpA.png
+ ┃ ┃ ┃ ┣ 📜star-circle-uhg.png
+ ┃ ┃ ┃ ┣ 📜star-circle-Uii.png
+ ┃ ┃ ┃ ┣ 📜star-circle-VjC.png
+ ┃ ┃ ┃ ┣ 📜star-circle-wCi.png
+ ┃ ┃ ┃ ┣ 📜star-circle-WKg.png
+ ┃ ┃ ┃ ┣ 📜star-circle-yUS.png
+ ┃ ┃ ┃ ┣ 📜star-circle.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-1-aMc.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-1-FQ2.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-1-nM4.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-1.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-2-bw4.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-2-hTL.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-2-RsU.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-2-VxS.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-2.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-3-cte.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-3-ENi.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-3-K2e.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-3-vaz.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-3.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-4-Gzi.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-4-N6i.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-4-Ni2.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-4-v7Q.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-4.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-5-AQN.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-5-FaE.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-5-NYv.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-5-RhY.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-5.png
+ ┃ ┃ ┃ ┣ 📜tickcheckmarkaccepticon-1.png
+ ┃ ┃ ┃ ┣ 📜vector-4gv.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-2VL.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-2zJ.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-3TC.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-7mG.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-8Ei.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-9bC.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-bk2.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-DUz.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-ehc.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-erA.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-EVL.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-h5Y.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-HtA.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-KxS.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-mHG.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-mUa.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-NJA.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-oFt.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-QzJ.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-R3C.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-RGr.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-taJ.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-XsU.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-yCa.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-yhg.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-zMC.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke.png
+ ┃ ┃ ┃ ┣ 📜vector-57-9Zp.png
+ ┃ ┃ ┃ ┣ 📜vector-57-AdL.png
+ ┃ ┃ ┃ ┣ 📜vector-57-AML.png
+ ┃ ┃ ┃ ┣ 📜vector-57-Bf4.png
+ ┃ ┃ ┃ ┣ 📜vector-57-Eqk.png
+ ┃ ┃ ┃ ┣ 📜vector-57-mmG.png
+ ┃ ┃ ┃ ┣ 📜vector-57-PtJ.png
+ ┃ ┃ ┃ ┣ 📜vector-57-wZY.png
+ ┃ ┃ ┃ ┣ 📜vector-57-xT8.png
+ ┃ ┃ ┃ ┣ 📜vector-57.png
+ ┃ ┃ ┃ ┣ 📜vector-58-eB8.png
+ ┃ ┃ ┃ ┣ 📜vector-58-Pti.png
+ ┃ ┃ ┃ ┣ 📜vector-58.png
+ ┃ ┃ ┃ ┣ 📜vector-59-3CS.png
+ ┃ ┃ ┃ ┣ 📜vector-59-Pgi.png
+ ┃ ┃ ┃ ┣ 📜vector-59.png
+ ┃ ┃ ┃ ┣ 📜vector-6Aa.png
+ ┃ ┃ ┃ ┣ 📜vector-6UN.png
+ ┃ ┃ ┃ ┣ 📜vector-9cz.png
+ ┃ ┃ ┃ ┣ 📜vector-9ZG.png
+ ┃ ┃ ┃ ┣ 📜vector-bav.png
+ ┃ ┃ ┃ ┣ 📜vector-Bvn.png
+ ┃ ┃ ┃ ┣ 📜vector-diW.png
+ ┃ ┃ ┃ ┣ 📜vector-fvW.png
+ ┃ ┃ ┃ ┣ 📜vector-Gaz.png
+ ┃ ┃ ┃ ┣ 📜vector-GQN.png
+ ┃ ┃ ┃ ┣ 📜vector-H4A.png
+ ┃ ┃ ┃ ┣ 📜vector-hGS.png
+ ┃ ┃ ┃ ┣ 📜vector-MH8.png
+ ┃ ┃ ┃ ┣ 📜vector-N5U.png
+ ┃ ┃ ┃ ┣ 📜vector-pBg.png
+ ┃ ┃ ┃ ┣ 📜vector-qBL.png
+ ┃ ┃ ┃ ┣ 📜vector-qUS.png
+ ┃ ┃ ┃ ┣ 📜vector-qyY.png
+ ┃ ┃ ┃ ┣ 📜vector-RCA.png
+ ┃ ┃ ┃ ┣ 📜vector-rTY.png
+ ┃ ┃ ┃ ┣ 📜vector-Rxr.png
+ ┃ ┃ ┃ ┣ 📜vector-tdk.png
+ ┃ ┃ ┃ ┣ 📜vector-TXt.png
+ ┃ ┃ ┃ ┣ 📜vector-U3Q.png
+ ┃ ┃ ┃ ┣ 📜vector-UAS.png
+ ┃ ┃ ┃ ┣ 📜vector-VYA.png
+ ┃ ┃ ┃ ┣ 📜vector-WNa.png
+ ┃ ┃ ┃ ┣ 📜vector-WV4.png
+ ┃ ┃ ┃ ┣ 📜vector-Xb4.png
+ ┃ ┃ ┃ ┣ 📜vector-y6E.png
+ ┃ ┃ ┃ ┣ 📜vector.png
+ ┃ ┃ ┃ ┣ 📜wrongdeleteremovetrashminusicon-1-6Cv.png
+ ┃ ┃ ┃ ┣ 📜wrongdeleteremovetrashminusicon-1-aU6.png
+ ┃ ┃ ┃ ┣ 📜wrongdeleteremovetrashminusicon-1-FH8.png
+ ┃ ┃ ┃ ┣ 📜wrongdeleteremovetrashminusicon-1-fvE.png
+ ┃ ┃ ┃ ┣ 📜wrongdeleteremovetrashminusicon-1-iHU.png
+ ┃ ┃ ┃ ┣ 📜wrongdeleteremovetrashminusicon-1-yKk.png
+ ┃ ┃ ┃ ┣ 📜wrongdeleteremovetrashminusicon-1-zWJ.png
+ ┃ ┃ ┃ ┗ 📜wrongdeleteremovetrashminusicon-1.png
+ ┃ ┃ ┗ 📂style
+ ┃ ┃ ┃ ┣ 📜a-login.css
+ ┃ ┃ ┃ ┣ 📜categorieswise-sorted-list.css
+ ┃ ┃ ┃ ┣ 📜category-list.css
+ ┃ ┃ ┃ ┗ 📜my-form-detail-page-irr.css
+ ┃ ┣ 📂site_app
+ ┃ ┃ ┣ 📂migrations
+ ┃ ┃ ┃ ┣ 📂__pycache__
+ ┃ ┃ ┃ ┃ ┣ 📜0001_initial.cpython-310.pyc
+ ┃ ┃ ┃ ┃ ┗ 📜__init__.cpython-310.pyc
+ ┃ ┃ ┃ ┣ 📜0001_initial.py
+ ┃ ┃ ┃ ┗ 📜__init__.py
+ ┃ ┃ ┣ 📂__pycache__
+ ┃ ┃ ┃ ┣ 📜admin.cpython-310.pyc
+ ┃ ┃ ┃ ┣ 📜Amazon.cpython-310.pyc
+ ┃ ┃ ┃ ┣ 📜apps.cpython-310.pyc
+ ┃ ┃ ┃ ┣ 📜forms.cpython-310.pyc
+ ┃ ┃ ┃ ┣ 📜models.cpython-310.pyc
+ ┃ ┃ ┃ ┣ 📜tasks.cpython-310.pyc
+ ┃ ┃ ┃ ┣ 📜urls.cpython-310.pyc
+ ┃ ┃ ┃ ┣ 📜views.cpython-310.pyc
+ ┃ ┃ ┃ ┗ 📜__init__.cpython-310.pyc
+ ┃ ┃ ┣ 📜admin.py
+ ┃ ┃ ┣ 📜Amazon.py
+ ┃ ┃ ┣ 📜apps.py
+ ┃ ┃ ┣ 📜forms.py
+ ┃ ┃ ┣ 📜models.py
+ ┃ ┃ ┣ 📜tasks.py
+ ┃ ┃ ┣ 📜tests.py
+ ┃ ┃ ┣ 📜urls.py
+ ┃ ┃ ┣ 📜views.py
+ ┃ ┃ ┗ 📜__init__.py
+ ┃ ┣ 📂statics
+ ┃ ┃ ┣ 📂admin
+ ┃ ┃ ┃ ┣ 📂css
+ ┃ ┃ ┃ ┃ ┣ 📂vendor
+ ┃ ┃ ┃ ┃ ┃ ┗ 📂select2
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜LICENSE-SELECT2.md
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜select2.css
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜select2.min.css
+ ┃ ┃ ┃ ┃ ┣ 📜autocomplete.css
+ ┃ ┃ ┃ ┃ ┣ 📜base.css
+ ┃ ┃ ┃ ┃ ┣ 📜changelists.css
+ ┃ ┃ ┃ ┃ ┣ 📜dark_mode.css
+ ┃ ┃ ┃ ┃ ┣ 📜dashboard.css
+ ┃ ┃ ┃ ┃ ┣ 📜forms.css
+ ┃ ┃ ┃ ┃ ┣ 📜login.css
+ ┃ ┃ ┃ ┃ ┣ 📜nav_sidebar.css
+ ┃ ┃ ┃ ┃ ┣ 📜responsive.css
+ ┃ ┃ ┃ ┃ ┣ 📜responsive_rtl.css
+ ┃ ┃ ┃ ┃ ┣ 📜rtl.css
+ ┃ ┃ ┃ ┃ ┗ 📜widgets.css
+ ┃ ┃ ┃ ┣ 📂img
+ ┃ ┃ ┃ ┃ ┣ 📂gis
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜move_vertex_off.svg
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜move_vertex_on.svg
+ ┃ ┃ ┃ ┃ ┣ 📜calendar-icons.svg
+ ┃ ┃ ┃ ┃ ┣ 📜icon-addlink.svg
+ ┃ ┃ ┃ ┃ ┣ 📜icon-alert.svg
+ ┃ ┃ ┃ ┃ ┣ 📜icon-calendar.svg
+ ┃ ┃ ┃ ┃ ┣ 📜icon-changelink.svg
+ ┃ ┃ ┃ ┃ ┣ 📜icon-clock.svg
+ ┃ ┃ ┃ ┃ ┣ 📜icon-deletelink.svg
+ ┃ ┃ ┃ ┃ ┣ 📜icon-no.svg
+ ┃ ┃ ┃ ┃ ┣ 📜icon-unknown-alt.svg
+ ┃ ┃ ┃ ┃ ┣ 📜icon-unknown.svg
+ ┃ ┃ ┃ ┃ ┣ 📜icon-viewlink.svg
+ ┃ ┃ ┃ ┃ ┣ 📜icon-yes.svg
+ ┃ ┃ ┃ ┃ ┣ 📜inline-delete.svg
+ ┃ ┃ ┃ ┃ ┣ 📜LICENSE
+ ┃ ┃ ┃ ┃ ┣ 📜README.txt
+ ┃ ┃ ┃ ┃ ┣ 📜search.svg
+ ┃ ┃ ┃ ┃ ┣ 📜selector-icons.svg
+ ┃ ┃ ┃ ┃ ┣ 📜sorting-icons.svg
+ ┃ ┃ ┃ ┃ ┣ 📜tooltag-add.svg
+ ┃ ┃ ┃ ┃ ┗ 📜tooltag-arrowright.svg
+ ┃ ┃ ┃ ┗ 📂js
+ ┃ ┃ ┃ ┃ ┣ 📂admin
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜DateTimeShortcuts.js
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜RelatedObjectLookups.js
+ ┃ ┃ ┃ ┃ ┣ 📂vendor
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂jquery
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜jquery.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜jquery.min.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜LICENSE.txt
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂select2
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂i18n
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜af.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ar.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜az.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜bg.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜bn.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜bs.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ca.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜cs.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜da.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜de.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜dsb.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜el.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜en.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜es.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜et.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜eu.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜fa.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜fi.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜fr.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜gl.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜he.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜hi.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜hr.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜hsb.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜hu.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜hy.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜id.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜is.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜it.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ja.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ka.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜km.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ko.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜lt.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜lv.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜mk.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ms.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜nb.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ne.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜nl.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜pl.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ps.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜pt-BR.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜pt.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ro.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ru.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜sk.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜sl.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜sq.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜sr-Cyrl.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜sr.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜sv.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜th.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜tk.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜tr.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜uk.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜vi.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜zh-CN.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜zh-TW.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜LICENSE.md
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜select2.full.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜select2.full.min.js
+ ┃ ┃ ┃ ┃ ┃ ┗ 📂xregexp
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜LICENSE.txt
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜xregexp.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜xregexp.min.js
+ ┃ ┃ ┃ ┃ ┣ 📜actions.js
+ ┃ ┃ ┃ ┃ ┣ 📜autocomplete.js
+ ┃ ┃ ┃ ┃ ┣ 📜calendar.js
+ ┃ ┃ ┃ ┃ ┣ 📜cancel.js
+ ┃ ┃ ┃ ┃ ┣ 📜change_form.js
+ ┃ ┃ ┃ ┃ ┣ 📜collapse.js
+ ┃ ┃ ┃ ┃ ┣ 📜core.js
+ ┃ ┃ ┃ ┃ ┣ 📜filters.js
+ ┃ ┃ ┃ ┃ ┣ 📜inlines.js
+ ┃ ┃ ┃ ┃ ┣ 📜jquery.init.js
+ ┃ ┃ ┃ ┃ ┣ 📜nav_sidebar.js
+ ┃ ┃ ┃ ┃ ┣ 📜popup_response.js
+ ┃ ┃ ┃ ┃ ┣ 📜prepopulate.js
+ ┃ ┃ ┃ ┃ ┣ 📜prepopulate_init.js
+ ┃ ┃ ┃ ┃ ┣ 📜SelectBox.js
+ ┃ ┃ ┃ ┃ ┣ 📜SelectFilter2.js
+ ┃ ┃ ┃ ┃ ┣ 📜theme.js
+ ┃ ┃ ┃ ┃ ┗ 📜urlify.js
+ ┃ ┃ ┣ 📂assets
+ ┃ ┃ ┃ ┣ 📜-2oQ.png
+ ┃ ┃ ┃ ┣ 📜-Bxi.png
+ ┃ ┃ ┃ ┣ 📜-dk2.png
+ ┃ ┃ ┃ ┣ 📜-opJ.png
+ ┃ ┃ ┃ ┣ 📜auto-group-19ui.png
+ ┃ ┃ ┃ ┣ 📜auto-group-1jty.png
+ ┃ ┃ ┃ ┣ 📜auto-group-68xx.png
+ ┃ ┃ ┃ ┣ 📜auto-group-gm74.png
+ ┃ ┃ ┃ ┣ 📜auto-group-httk.png
+ ┃ ┃ ┃ ┣ 📜auto-group-km8a.png
+ ┃ ┃ ┃ ┣ 📜auto-group-mfa6.png
+ ┃ ┃ ┃ ┣ 📜auto-group-mzra.png
+ ┃ ┃ ┃ ┣ 📜auto-group-pw98.png
+ ┃ ┃ ┃ ┣ 📜auto-group-qybg.png
+ ┃ ┃ ┃ ┣ 📜auto-group-rdyp.png
+ ┃ ┃ ┃ ┣ 📜auto-group-ywzz.png
+ ┃ ┃ ┃ ┣ 📜auto-group-z72e.png
+ ┃ ┃ ┃ ┣ 📜autofixnormalblack24dp-1-2y4.png
+ ┃ ┃ ┃ ┣ 📜autofixnormalblack24dp-1.png
+ ┃ ┃ ┃ ┣ 📜clouddoneblack24dp-1.png
+ ┃ ┃ ┃ ┣ 📜contentcopyblack24dp-1-YuU.png
+ ┃ ┃ ┃ ┣ 📜contentcopyblack24dp-1.png
+ ┃ ┃ ┃ ┣ 📜contentcopyblack24dp-2-YiS.png
+ ┃ ┃ ┃ ┣ 📜contentcopyblack24dp-2.png
+ ┃ ┃ ┃ ┣ 📜delete-fot.png
+ ┃ ┃ ┃ ┣ 📜delete-vaS.png
+ ┃ ┃ ┃ ┣ 📜delete-Wmt.png
+ ┃ ┃ ┃ ┣ 📜delete.png
+ ┃ ┃ ┃ ┣ 📜ellipse-23.png
+ ┃ ┃ ┃ ┣ 📜file-jpg-box-7AW.png
+ ┃ ┃ ┃ ┣ 📜file-jpg-box-AQW.png
+ ┃ ┃ ┃ ┣ 📜file-jpg-box-JxN.png
+ ┃ ┃ ┃ ┣ 📜file-jpg-box-rMk.png
+ ┃ ┃ ┃ ┣ 📜file-jpg-box-s5g.png
+ ┃ ┃ ┃ ┣ 📜file-jpg-box-T6N.png
+ ┃ ┃ ┃ ┣ 📜file-jpg-box-ZpA.png
+ ┃ ┃ ┃ ┣ 📜file-jpg-box.png
+ ┃ ┃ ┃ ┣ 📜formoneicon-1.png
+ ┃ ┃ ┃ ┣ 📜gifticon-1.png
+ ┃ ┃ ┃ ┣ 📜group-12.png
+ ┃ ┃ ┃ ┣ 📜group-21-HpJ.png
+ ┃ ┃ ┃ ┣ 📜group-21.png
+ ┃ ┃ ┃ ┣ 📜group-40-f7t.png
+ ┃ ┃ ┃ ┣ 📜group-40-NJa.png
+ ┃ ┃ ┃ ┣ 📜group-40-rLW.png
+ ┃ ┃ ┃ ┣ 📜group-40.png
+ ┃ ┃ ┃ ┣ 📜group-41-xtv.png
+ ┃ ┃ ┃ ┣ 📜group-41.png
+ ┃ ┃ ┃ ┣ 📜group-42-9Z8.png
+ ┃ ┃ ┃ ┣ 📜group-42.png
+ ┃ ┃ ┃ ┣ 📜group-46.png
+ ┃ ┃ ┃ ┣ 📜group-47-hKc.png
+ ┃ ┃ ┃ ┣ 📜group-47-hWe.png
+ ┃ ┃ ┃ ┣ 📜group-47-JsQ.png
+ ┃ ┃ ┃ ┣ 📜group-47-WQv.png
+ ┃ ┃ ┃ ┣ 📜group-47.png
+ ┃ ┃ ┃ ┣ 📜group-53.png
+ ┃ ┃ ┃ ┣ 📜group-60-3gS.png
+ ┃ ┃ ┃ ┣ 📜group-60-SMt.png
+ ┃ ┃ ┃ ┣ 📜group-60-TFU.png
+ ┃ ┃ ┃ ┣ 📜group-60.png
+ ┃ ┃ ┃ ┣ 📜group-78.png
+ ┃ ┃ ┃ ┣ 📜group-79.png
+ ┃ ┃ ┃ ┣ 📜kashifarifuserprofilepersonaccounticon-1.png
+ ┃ ┃ ┃ ┣ 📜listchecklistmenunotedocumenticon-1.png
+ ┃ ┃ ┃ ┣ 📜polygon-1-Ypn.png
+ ┃ ┃ ┃ ┣ 📜polygon-1.png
+ ┃ ┃ ┃ ┣ 📜rectangle-32.png
+ ┃ ┃ ┃ ┣ 📜rectangle-33.png
+ ┃ ┃ ┃ ┣ 📜rectangle-34.png
+ ┃ ┃ ┃ ┣ 📜rectangle-35-fCi.png
+ ┃ ┃ ┃ ┣ 📜rectangle-35.png
+ ┃ ┃ ┃ ┣ 📜star-circle-2L6.png
+ ┃ ┃ ┃ ┣ 📜star-circle-2w8.png
+ ┃ ┃ ┃ ┣ 📜star-circle-3Y2.png
+ ┃ ┃ ┃ ┣ 📜star-circle-3zv.png
+ ┃ ┃ ┃ ┣ 📜star-circle-5Fk.png
+ ┃ ┃ ┃ ┣ 📜star-circle-7gS.png
+ ┃ ┃ ┃ ┣ 📜star-circle-7RQ.png
+ ┃ ┃ ┃ ┣ 📜star-circle-9KC.png
+ ┃ ┃ ┃ ┣ 📜star-circle-b4i.png
+ ┃ ┃ ┃ ┣ 📜star-circle-BGS.png
+ ┃ ┃ ┃ ┣ 📜star-circle-C5t.png
+ ┃ ┃ ┃ ┣ 📜star-circle-EgE.png
+ ┃ ┃ ┃ ┣ 📜star-circle-fuG.png
+ ┃ ┃ ┃ ┣ 📜star-circle-G7p.png
+ ┃ ┃ ┃ ┣ 📜star-circle-ibg.png
+ ┃ ┃ ┃ ┣ 📜star-circle-Jra.png
+ ┃ ┃ ┃ ┣ 📜star-circle-jyY.png
+ ┃ ┃ ┃ ┣ 📜star-circle-KwL.png
+ ┃ ┃ ┃ ┣ 📜star-circle-nFx.png
+ ┃ ┃ ┃ ┣ 📜star-circle-NYE.png
+ ┃ ┃ ┃ ┣ 📜star-circle-pTg.png
+ ┃ ┃ ┃ ┣ 📜star-circle-q2E.png
+ ┃ ┃ ┃ ┣ 📜star-circle-S2a.png
+ ┃ ┃ ┃ ┣ 📜star-circle-szN.png
+ ┃ ┃ ┃ ┣ 📜star-circle-TpA.png
+ ┃ ┃ ┃ ┣ 📜star-circle-uhg.png
+ ┃ ┃ ┃ ┣ 📜star-circle-Uii.png
+ ┃ ┃ ┃ ┣ 📜star-circle-VjC.png
+ ┃ ┃ ┃ ┣ 📜star-circle-wCi.png
+ ┃ ┃ ┃ ┣ 📜star-circle-WKg.png
+ ┃ ┃ ┃ ┣ 📜star-circle-yUS.png
+ ┃ ┃ ┃ ┣ 📜star-circle.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-1-aMc.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-1-FQ2.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-1-nM4.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-1.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-2-bw4.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-2-hTL.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-2-RsU.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-2-VxS.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-2.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-3-cte.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-3-ENi.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-3-K2e.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-3-vaz.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-3.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-4-Gzi.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-4-N6i.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-4-Ni2.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-4-v7Q.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-4.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-5-AQN.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-5-FaE.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-5-NYv.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-5-RhY.png
+ ┃ ┃ ┃ ┣ 📜taskaltblack24dp-1-5.png
+ ┃ ┃ ┃ ┣ 📜tickcheckmarkaccepticon-1.png
+ ┃ ┃ ┃ ┣ 📜vector-4gv.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-2VL.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-2zJ.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-3TC.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-7mG.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-8Ei.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-9bC.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-bk2.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-DUz.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-ehc.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-erA.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-EVL.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-h5Y.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-HtA.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-KxS.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-mHG.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-mUa.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-NJA.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-oFt.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-QzJ.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-R3C.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-RGr.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-taJ.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-XsU.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-yCa.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-yhg.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke-zMC.png
+ ┃ ┃ ┃ ┣ 📜vector-54-stroke.png
+ ┃ ┃ ┃ ┣ 📜vector-57-9Zp.png
+ ┃ ┃ ┃ ┣ 📜vector-57-AdL.png
+ ┃ ┃ ┃ ┣ 📜vector-57-AML.png
+ ┃ ┃ ┃ ┣ 📜vector-57-Bf4.png
+ ┃ ┃ ┃ ┣ 📜vector-57-Eqk.png
+ ┃ ┃ ┃ ┣ 📜vector-57-mmG.png
+ ┃ ┃ ┃ ┣ 📜vector-57-PtJ.png
+ ┃ ┃ ┃ ┣ 📜vector-57-wZY.png
+ ┃ ┃ ┃ ┣ 📜vector-57-xT8.png
+ ┃ ┃ ┃ ┣ 📜vector-57.png
+ ┃ ┃ ┃ ┣ 📜vector-58-eB8.png
+ ┃ ┃ ┃ ┣ 📜vector-58-Pti.png
+ ┃ ┃ ┃ ┣ 📜vector-58.png
+ ┃ ┃ ┃ ┣ 📜vector-59-3CS.png
+ ┃ ┃ ┃ ┣ 📜vector-59-Pgi.png
+ ┃ ┃ ┃ ┣ 📜vector-59.png
+ ┃ ┃ ┃ ┣ 📜vector-6Aa.png
+ ┃ ┃ ┃ ┣ 📜vector-6UN.png
+ ┃ ┃ ┃ ┣ 📜vector-9cz.png
+ ┃ ┃ ┃ ┣ 📜vector-9ZG.png
+ ┃ ┃ ┃ ┣ 📜vector-bav.png
+ ┃ ┃ ┃ ┣ 📜vector-Bvn.png
+ ┃ ┃ ┃ ┣ 📜vector-diW.png
+ ┃ ┃ ┃ ┣ 📜vector-fvW.png
+ ┃ ┃ ┃ ┣ 📜vector-Gaz.png
+ ┃ ┃ ┃ ┣ 📜vector-GQN.png
+ ┃ ┃ ┃ ┣ 📜vector-H4A.png
+ ┃ ┃ ┃ ┣ 📜vector-hGS.png
+ ┃ ┃ ┃ ┣ 📜vector-MH8.png
+ ┃ ┃ ┃ ┣ 📜vector-N5U.png
+ ┃ ┃ ┃ ┣ 📜vector-pBg.png
+ ┃ ┃ ┃ ┣ 📜vector-qBL.png
+ ┃ ┃ ┃ ┣ 📜vector-qUS.png
+ ┃ ┃ ┃ ┣ 📜vector-qyY.png
+ ┃ ┃ ┃ ┣ 📜vector-RCA.png
+ ┃ ┃ ┃ ┣ 📜vector-rTY.png
+ ┃ ┃ ┃ ┣ 📜vector-Rxr.png
+ ┃ ┃ ┃ ┣ 📜vector-tdk.png
+ ┃ ┃ ┃ ┣ 📜vector-TXt.png
+ ┃ ┃ ┃ ┣ 📜vector-U3Q.png
+ ┃ ┃ ┃ ┣ 📜vector-UAS.png
+ ┃ ┃ ┃ ┣ 📜vector-VYA.png
+ ┃ ┃ ┃ ┣ 📜vector-WNa.png
+ ┃ ┃ ┃ ┣ 📜vector-WV4.png
+ ┃ ┃ ┃ ┣ 📜vector-Xb4.png
+ ┃ ┃ ┃ ┣ 📜vector-y6E.png
+ ┃ ┃ ┃ ┣ 📜vector.png
+ ┃ ┃ ┃ ┣ 📜wrongdeleteremovetrashminusicon-1-6Cv.png
+ ┃ ┃ ┃ ┣ 📜wrongdeleteremovetrashminusicon-1-aU6.png
+ ┃ ┃ ┃ ┣ 📜wrongdeleteremovetrashminusicon-1-FH8.png
+ ┃ ┃ ┃ ┣ 📜wrongdeleteremovetrashminusicon-1-fvE.png
+ ┃ ┃ ┃ ┣ 📜wrongdeleteremovetrashminusicon-1-iHU.png
+ ┃ ┃ ┃ ┣ 📜wrongdeleteremovetrashminusicon-1-yKk.png
+ ┃ ┃ ┃ ┣ 📜wrongdeleteremovetrashminusicon-1-zWJ.png
+ ┃ ┃ ┃ ┗ 📜wrongdeleteremovetrashminusicon-1.png
+ ┃ ┃ ┗ 📂style
+ ┃ ┃ ┃ ┣ 📜a-login.css
+ ┃ ┃ ┃ ┣ 📜categorieswise-sorted-list.css
+ ┃ ┃ ┃ ┣ 📜category-list.css
+ ┃ ┃ ┃ ┗ 📜my-form-detail-page-irr.css
+ ┃ ┣ 📂templates
+ ┃ ┃ ┣ 📜a-login.html
+ ┃ ┃ ┣ 📜add-category.html
+ ┃ ┃ ┣ 📜add-product.html
+ ┃ ┃ ┣ 📜base_form.html
+ ┃ ┃ ┣ 📜category-list.html
+ ┃ ┃ ┣ 📜data.html
+ ┃ ┃ ┣ 📜product-link.html
+ ┃ ┃ ┗ 📜signup.html
+ ┃ ┣ 📜.gitignore
+ ┃ ┣ 📜db.sqlite3
+ ┃ ┗ 📜manage.py
+ ┣ 📜.gitignore
+ ┣ 📜docker-compose.yml
+ ┣ 📜Dockerfile
+ ┣ 📜README.md
+ ┗ 📜requirements.txt
