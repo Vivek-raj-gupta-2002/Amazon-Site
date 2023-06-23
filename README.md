@@ -27,10 +27,10 @@ Access your project at:
 http://localhost:8000/
 ```
 
-
 ### Remember
 1. Docker must be installed on your system to run this project.
 2. Set `DEBUG` in `settings.py` to `True` during development, otherwise set it to `False`.
+3. If you are running the command for the first time, close it by pressing `Ctrl + C` and rerun the command.
 
 ## Features
 1. Automatically collects data at 12:00 AM (IST) daily.
@@ -41,5 +41,4 @@ http://localhost:8000/
 
 🙌 **Contributors**
 - [Sanskar Goyal](https://github.com/Sanskargoyal608)
-
 - [Vivek Raj Gupta](https://github.com/Vivek-raj-gupta-2002)
